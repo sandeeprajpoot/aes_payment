@@ -183,8 +183,8 @@ executeQuery($query);
 
 // Update PO status if PO status has been changed by Audit
 $poamt=@@balaftpay;
-$postat=@@postatus
- $ponum=@@pono_label;
+$postat=@@postatus;
+$ponum=@@pono_label;
 if ($postat==01) {
 $query="UPDATE Purchase_order_Approval_Details SET postatus = 'Closed' where poNumber ='$ponum'";
 }
@@ -195,7 +195,7 @@ executeQuery($query);
 
 // Update   Delivery Details if PO status has been changed by Audit
 $poamt=@@balaftpay;
-$postat=@@postatus
+$postat=@@postatus;
  $ponum=@@pono_label;
 if ($postat==01) {
 $query="UPDATE Delivery_Details SET postatus = 'Closed' where poNumber ='$ponum'";
